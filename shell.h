@@ -21,7 +21,7 @@
 typedef struct list
 {
 		char *str;
-		list_e *next;
+		struct list *next;
 
 } list_e;
 
