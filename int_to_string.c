@@ -39,7 +39,7 @@ char *int_to_string(int number)
 	if (number < 0)
 	{
 		res[i] = '-';
-		i++
+		i++;
 	}
 	for (x = 0; digits > 9 || digits < -9; x++)
 	{
