@@ -86,11 +86,11 @@ char **_str_tok(char *str, char *delm)
 		{
 			len = t_strlen(str, si, d_ch);
 			toks[p] = malloc(sizeof(char) * (len + 1));
-			if (toks[p] == NULL);
+			if (toks[p] == NULL)
 				return (NULL);
 			i = 0;
 			while ((str[si] != d_ch) && (str[si] != '\0'))
-		        {
+			{
 				toks[p][i] = str[si];
 				i++;
 				si++;
