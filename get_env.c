@@ -39,7 +39,7 @@ char *c_strdup(char *str, int cs)
  * @env: entire set of environmental variables
  * Return: copy of requested environmental variable
  */
-char *get_env(char *str, list_t *env)
+char *get_env(char *str, list_e *env)
 {
 	int j = 0, cs = 0;
 
