@@ -1,4 +1,4 @@
-nclude "shell.h"
+#include "shell.h"
 
 /**
  * c_strdup - custom string duplication; excludes beginning bytes
@@ -46,9 +46,9 @@ char *get_env(char *str, list_e *env)
 	while (env != NULL)
 	{
 		j = 0;
-		while ((env->var)[j] == str[j]) /* find desired env variable */
+		while ((env->str)[j] == str[j]) /* find desired env variable */
 			j++;
-		if (str[j] == '\0' && (env->var)[j] == '=')
+		if (str[j] == '\0' && (env->str)[j] == '=')
 			break;
 		env = env->next;
 	}
@@ -56,5 +56,5 @@ char *get_env(char *str, list_e *env)
 	while (str[cs] != '\0') /* find how many bytes in env variable title */
 		cs++;
 	cs++; /*counts 1 more for = sign*/
-	return (c_strdup(env->var, cs)); /* make a copy of variable w/o title */
+	return (c_strdup(env->str, cs)); /* make a copy of variable w/o title */
 }

@@ -24,8 +24,8 @@ char *_which(char *str, list_e *env)
 			cat = getcwd(cat, 0);
 		else
 			cat = _strdup(toks[i]);
-			cat = _strcat(cat, "/");
-			cat = _strcat(cat, str);
+		cat = _strcat(cat, "/");
+		cat = _strcat(cat, str);
 		if (access(cat, F_OK) == 0)
 		{
 			/* free tokens before returning legit fleshed path */
