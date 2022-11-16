@@ -65,8 +65,8 @@ int c_setenv(list_e **env, char *name, char *dir)
 		holder = holder->next;
 		j++;
 	}
-	free(holder->var);
-	holder->var = _strdup(cat);
+	free(holder->str);
+	holder->str = _strdup(cat);
 	free(cat);
 	return (0);
 }
